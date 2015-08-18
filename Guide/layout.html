@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>Web Template</title>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" marginheight="0" marginwidth="0" style="background-color:white;">
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#5CB3FF">
+  <tr>
+    <td width="100%"><font face="Arial Black" size="6" color="#000000">YQL Layout</font></td>
+  </tr>
+</table>
+<table border="0" width="100%" bgcolor="#000000" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%"><font color="#FFFFFF" face="Arial" size="2"><b>Orientation of YQL's developer console</b></font></td>
+  </tr>
+</table>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="18%" bgcolor="#5CB3FF" valign="top">&nbsp;
+      <p style="margin-left: 20"><b><font face="Arial" size="2" color="#000000">
+	  1:<a href="index.html"> Introduction</a><br>
+      2:<a href="layout.html"> Layout</a><br>
+      3:<a href="Example1.html"> Craigslist example</a><br>
+	  4:<a href="Example2.html"> Stock Market</a><br>
+	  5:<a href="recap.html"> Recap</a><br>
+      </font></b>
+	  </td>
+    <td width="61%" valign="top">
+      <blockquote>
+        <p><br>
+        <font face="Verdana" size="5"><b>The Console</b></font></p>
+		<img src="layout.png" width="1250">
+        <p><font size="3" face="Verdana">Visit <a href="https://developer.yahoo.com/yql/console/">Here</a> to open up the developer console of YQL.
+		<br>
+		I've color-coded the most important aspect of YQL and will describe each section below.
+		</font></p>
+       
+		<font face="Verdana" color="red" size="5"><b>Show Community Tables Check-box</b></font></p>
+        <p><font size="3" face="Verdana">Circled on the top left is the Show Community Tables checkbox. Like I've mentioned before, YQL is very similar 
+		to SQL in the sense that you are querying using tables.  Clicking this checkbox will display the entire list of tables that YQL has at their disposal.
+		You will notice that many more tables will appear under the tables section.
+		</font></p>
+		
+		<font face="Verdana" color="orange" size="5"><b>List of Tables</b></font></p>
+        <p><font size="3" face="Verdana">Highlighted in orange is the list of tables developers can scan through to query information.  Clicking on a table 
+		will display a sample of how to query for that table under the statement text field. Tables hold all the information that returns a response via XML or JSON
+		after being queried correctly.
+	
+		</font></p>
+		
+		<font face="Verdana" color="green" size="5"><b>YQL Query Field</b></font></p>
+        <p><font size="3" face="Verdana">In the green box is the query text field.  Users will enter in their queries in this box and click on the test button 
+		in blue to receive their response. Example queries often come up after users click on a table.  This quickly allows users to learn how each table is queried
+		and what type of information is required in the query statements to allow for correct usage of the table.
+		</font></p>
+		
+		<font face="Verdana"  size="5"><b>XML / JSON button</b></font></p>
+        <p><font size="3" face="Verdana">Users can choose between XML or JSON responses here.  This guide will be more focused on using JSON as an example, but
+		both work just fine.
+		</font></p>
+		
+		<font face="Verdana" color="purple" size="5"><b>Tree View Tab</b></font></p>
+        <p><font size="3" face="Verdana">When querying under a large table, most often users will see a large amount of data in the response. By looking at 
+		raw JSON or XML responses, it can be very difficult to determine the different nests of curly brackets in order to parse the response out correctly.
+		Luckily, there is the Tree View option.  Once clicked, the responses will be organized in a tree view making it much more clear on how to read the 
+		data.  Users can expand the tree to see what type of information they want to parse from the response.  
+		</font></p>
+		
+		<font face="Verdana" color="blue" size="5"><b>Response Box</b></font></p>
+        <p><font size="3" face="Verdana">Responses will be displayed out here so as a way for users to quickly see the contents, as well as using the Tree View
+		option to see their response.  This response field serves as a way to make it easier for users to look for the information that they want from their query,
+		but is not the actual page's response after the query. The actual response is in the REST QUERY link below.
+		</font></p>
+		
+		<font face="Verdana" color="pink" size="5"><b>REST QUERY link</b></font></p>
+        <p><font size="3" face="Verdana">This is the last and most important part of the layout.  This will be the link that users use to obtain the response from.
+		Copying and pasting this into a browser, or a cURL command and users will see that the response is what the users queried for.  When developing your applications,
+		users should be aware of how to set up their URL partitions in order to use the REST QUERY url's correctly. 
+		</font></p>
+		
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      </blockquote>
+	  <p align="center"><a href="index.html"><< Previous</a> <a href="Example1.html">Next >></a><br>
+      
+    
+      
+
+	<table border="0" width="100%" bgcolor="#000000" cellspacing="0" cellpadding="0">
+		<tr>
+		<td width="100%"><font size="1">&nbsp;</font></td>
+		</tr>
+	</table>
+</body>
+
+</html>

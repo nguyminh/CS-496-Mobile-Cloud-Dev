@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>Web Template</title>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" marginheight="0" marginwidth="0" style="background-color:white;">
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#5CB3FF">
+  <tr>
+    <td width="100%"><font face="Arial Black" size="6" color="#000000">Microsoft Stocks</font></td>
+  </tr>
+</table>
+<table border="0" width="100%" bgcolor="#000000" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%"><font color="#FFFFFF" face="Arial" size="2"><b>Creating a MS stock market call</b></font></td>
+  </tr>
+</table>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="18%" bgcolor="#5CB3FF" valign="top">&nbsp;
+      <p style="margin-left: 20"><b><font face="Arial" size="2" color="#000000">
+	  1:<a href="index.html"> Introduction</a><br>
+      2:<a href="layout.html"> Layout</a><br>
+      3:<a href="Example1.html"> Craigslist</a><br>
+	  4:<a href="Example2.html"> Stock Market</a><br>
+	  5:<a href="recap.html"> Recap</a><br>
+      </font></b>
+	  </td>
+    <td width="61%" valign="top">
+      <blockquote>
+        <p><br>
+        <font face="Verdana" size="5"><b>Querying for Microsoft's stock information</b></font></p>
+       <p><font size="3" face="Verdana">This page of the guide will show you another example of how to make a query and retrieve a response, this time from
+	   the yahoo's finance table in YQL.  Imagine you are creating a dynamic financial web application that requires Microsoft's stock market information. 
+	   YQL has a table that can do just that.  Let's jump into it. 
+	   </font></p>
+		
+		<img src="ms2.png">
+       <p><font size="3" face="Verdana">Like before, First thing you need to do is click the show community tables check-box to see the entire list of tables.  Go under the 
+	   Yahoo tab, and find yahoo.finance.quotes.  The query will appear but we don't want any information that is non-MSFT(microsoft).  
+	   Let's change our query to this: 
+	   <pre>
+	   select * from yahoo.finance.quotes where symbol in ("MSFT")
+	   </pre>
+	   Or similar to before, if you'd like to manually do this yourself, click on the Tab on the right side for yahoo.finance.quotes to fill in
+	   the required conditions for this table yourself.  As you can see, the conditions for this table is much different than the craigslist
+	   table.  Let's Query for results!
+	   </font></p>	   
+		<img src="ms1.png">
+		
+		<p><font size="3" face="Verdana">Once again, click on the Tree View tab to view information like picture above.  For this example, the 
+		way to parse this JSON response would be query.diagnostics.results.quote - then any information you'd like to access here under quote.  
+		You know have another REST QUERY link generated on the bottom, and once again, partition this query into strings for your application appropriately.
+	   </font></p>
+		
+		
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      </blockquote>
+	  <p align="center"><a href="Example1.html"><< Previous</a> <a href="recap.html">Next >></a><br>
+      
+    
+      
+
+	<table border="0" width="100%" bgcolor="#000000" cellspacing="0" cellpadding="0">
+		<tr>
+		<td width="100%"><font size="1">&nbsp;</font></td>
+		</tr>
+	</table>
+</body>
+
+</html>

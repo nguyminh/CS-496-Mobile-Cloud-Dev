@@ -1,0 +1,47 @@
+add client 3 clients:
+curl --data-urlencode "username=test1" --data-urlencode "firstname=minh" -H "Accept: application/json" http://assignment3minh.appspot.com/client
+curl --data-urlencode "username=test2" --data-urlencode "firstname=john" -H "Accept: application/json" http://assignment3minh.appspot.com/client
+curl --data-urlencode "username=test3" --data-urlencode "firstname=Bill" -H "Accept: application/json" http://assignment3minh.appspot.com/client
+
+add candy 3 candy:
+curl --data-urlencode "candy_name=candy1" --data-urlencode "candy_price=1" -H "Accept: application/json" http://assignment3minh.appspot.com/candy
+curl --data-urlencode "candy_name=candy2" --data-urlencode "candy_price=2" -H "Accept: application/json" http://assignment3minh.appspot.com/candy
+curl --data-urlencode "candy_name=candy3" --data-urlencode "candy_price=3" -H "Accept: application/json" http://assignment3minh.appspot.com/candy
+
+client list: 
+curl -H "Accept: application/json" http://assignment3minh.appspot.com/client
+
+candy list: 
+curl -H "Accept: application/json" http://assignment3minh.appspot.com/candy
+
+Look up specific candy with name: 
+curl -H "Accept: application/json" http://assignment3minh.appspot.com/candy/candy1
+curl -H "Accept: application/json" http://assignment3minh.appspot.com/candy/candy2
+curl -H "Accept: application/json" http://assignment3minh.appspot.com/candy/candy3
+
+Look up specific client with username:
+curl -H "Accept: application/json" http://assignment3minh.appspot.com/client/test1
+curl -H "Accept: application/json" http://assignment3minh.appspot.com/client/test2
+curl -H "Accept: application/json" http://assignment3minh.appspot.com/client/test3
+
+Add candy 1 and 2 to client 'test1':
+curl -X PUT -d -H "Accept: application/json" http://assignment3minh.appspot.com/client/test1/candy1
+curl -X PUT -d -H 'Content-Length: 0' "Accept: application/json" http://assignment3minh.appspot.com/client/test1/candy2
+
+Should display candy 1 and 2 added to client 'test1':
+curl -H "Accept: application/json" http://assignment3minh.appspot.com/client/test1 
+
+delete client:
+curl -X DELETE -H "Accept: application/json" http://assignment3minh.appspot.com/client/test1
+
+test1 client should be gone:
+curl -H "Accept: application/json" http://assignment3minh.appspot.com/client
+
+delete candy:
+curl -X DELETE -H "Accept: application/json" http://assignment3minh.appspot.com/candy/candy1
+
+candy1 should be gone: 
+curl -H "Accept: application/json" http://assignment3minh.appspot.com/candy
+
+*************************************************************************************************************************************************
+All tests Pass

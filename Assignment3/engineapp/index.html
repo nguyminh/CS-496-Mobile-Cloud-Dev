@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<title> Data input page </title>
+</head>
+<body>
+	<form action="" method="post">
+	<fieldset>
+	<input type="hidden" name="action" value="candy">
+	Candy: <input type="text" name="candy_name"><br>
+	price: <input type="text" name="candy_price"><br>
+	<input type="submit" value="add candy to database">
+	</fieldset>
+	</form>
+	<form action="" method="post">
+	<fieldset>
+	<input type="hidden" name="action" value="user">
+	first name: <input type="text" name="first_name"><br>
+	last name: <input type="text" name="last_name"><br>
+	user name: <input type="text" name="user_name"><br><br>
+	Candy choices: <br>
+	{% for c in candy %}
+	<label> {{ c.name }} </label>
+	<input type="checkbox" name="candy[]" value={{ c.name }}><br>    
+	{% endfor %}
+	<br>
+	<input type="submit" value="Add user">
+	</fieldset>
+	</form>
+<br><br>
+<p><pre>Displayed for testing purposes</pre><hr>
+{% for c in candy %}
+<pre>
+Candy name: {{ c.name }}
+Price: {{ c.price }}
+</pre>
+{% endfor %}
+<br>
+<form action="candy" method="get">
+<input type="submit" value="Get candy JSON">
+</form>
+<br><br>
+{% for c in client %}
+<pre>
+Username: {{ c.username }}
+first name: {{ c.first_name }}
+last  name: {{ c.last_name }}
+Candy order: {{ c.candy }}
+<form action="edit" method="post">
+<input type="submit" value="edit this client">
+</form> 
+</pre>
+{% endfor %}
+<form action="client" method="get">
+<input type="submit" value="Get client JSON">
+</form>
+
+</body>
+</html>

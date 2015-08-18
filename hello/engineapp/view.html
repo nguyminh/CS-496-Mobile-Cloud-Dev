@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<title> View data page </title>
+</head>
+<body>
+	<h1>My Account</h1>
+	<form action="edit" method="post">
+	<fieldset>
+	<br>Username: {{ name }}
+	<br>Sex: {{ sex }}
+	<br>Operating System: {{ OS }}
+	<br>Games preferred: {% for g in games %} {{ g|e }}, {% endfor %}
+	<br>Bio: {{ text }}
+	<br>
+	<input type="hidden" name="user-name" value={{ name }}>
+	<input type="hidden" name="sex" value={{ sex }}>
+	<input type="hidden" name="OS" value={{ OS}}>
+	<input type="hidden" name="games[]" {% for g in games %} {% if g == 'RPG' %} value='RPG' {% endif %} {% endfor %}>
+	<input type="hidden" name="games[]" {% for g in games %} {% if g == 'FPS' %} value='FPS' {% endif %} {% endfor %}>
+	<input type="hidden" name="games[]" {% for g in games %} {% if g == 'MOBA' %} value='MOBA' {% endif %} {% endfor %}>
+	<input type="hidden" name="games[]" {% for g in games %} {% if g == 'Racing' %} value='Racing' {% endif %} {% endfor %}>
+	<input type="hidden" name="text" value={{ text }}>
+	
+	<input type="submit" value="Edit">
+	</fieldset>
+	</form>
+</body>
+</html>
+

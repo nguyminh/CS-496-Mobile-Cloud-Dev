@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<title> View data page </title>
+</head>
+<body>
+<h1>Edit data page</h1>
+<form action="view" method="post">
+	<fieldset><legend>Username</legend>
+	<input type="text" name="user-name" value={{ name }}>
+	</fieldset>
+	
+	<fieldset><legend>Sex</legend>
+	<input type="radio" name="sex" value="male" {% if sex == 'male' %} checked {% endif %}>Male
+	<br><input type="radio" name="sex" value="female" {% if sex == 'female' %} checked {% endif %}>Female
+	</fieldset>
+	
+	<fieldset><legend>Operating System</legend>
+	<select name="OS">
+				<option value="windows" {% if OS == 'windows' %} selected {% endif %}>Windows</option>
+				<option value="mac" {% if OS == 'mac' %} selected {% endif %}>Mac</option>
+				<option value="linux" {% if OS == 'linux' %} selected {% endif %}>Linux</option>
+				<option value="ubuntu" {% if OS == 'ubuntu' %} selected {% endif %}>Ubuntu</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<legend>Genre of games preferred</legend>
+			<input type="checkbox" name="games[]" value="RPG" {% for g in games %} {% if g == 'RPG' %} checked {% endif %} {% endfor %}>Role-playing games<br>
+			<input type="checkbox" name="games[]" value="FPS" {% for g in games %} {% if g == 'FPS' %} checked {% endif %} {% endfor %}>First Person Shooter<br>
+			<input type="checkbox" name="games[]" value="MOBA" {% for g in games %} {% if g == 'MOBA' %} checked {% endif %} {% endfor %}>Moba<br>
+			<input type="checkbox" name="games[]" value="Racing" {% for g in games %} {% if g == 'Racing' %} checked {% endif %} {% endfor %}>Racing games<br>
+		</fieldset>
+	
+		<fieldset>
+			<legend>Describe yourself</legend>
+			<textarea name="text" rows="5" cols="20">{{ text }}
+			</textarea>
+		</fieldset>
+	<input type="submit" value="Update">
+</form>
+</body>
+</html>

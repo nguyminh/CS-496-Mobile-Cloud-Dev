@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Web Template</title>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" marginheight="0" marginwidth="0" style="background-color:white;">
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#5CB3FF">
+  <tr>
+    <td width="100%"><font face="Arial Black" size="6" color="#000000">Craigslist</font></td>
+  </tr>
+</table>
+<table border="0" width="100%" bgcolor="#000000" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%"><font color="#FFFFFF" face="Arial" size="2"><b>Calling a Craigslist Query</b></font></td>
+  </tr>
+</table>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="18%" bgcolor="#5CB3FF" valign="top">&nbsp;
+      <p style="margin-left: 20"><b><font face="Arial" size="2" color="#000000">
+	  1:<a href="index.html"> Introduction</a><br>
+      2:<a href="layout.html"> Layout</a><br>
+      3:<a href="Example1.html"> Craigslist</a><br>
+	  4:<a href="Example2.html"> Stock Market</a><br>
+	  5:<a href="recap.html"> Recap</a><br>
+      </font></b>
+	  </td>
+    <td width="61%" valign="top">
+      <blockquote>
+        <p><br>
+        <font face="Verdana" size="5"><b>Let's Query for Craigslist</b></font></p>
+       <p><font size="3" face="Verdana">This page of the guide will show you an example of how to make a query and retrieve a response from
+	   the Craigslist table.  Let's pretend you are a creating a web application that allows user to search on the web for items that are for sale
+	   on Craigslist.  Instead of redirecting users to Craigslist and making users learn how to use Craigslist (if they don't know how to already), you
+	   can simply make a query in YQL that will look up the Craigslist table, perform the search, retrieve the response as JSON/XML data, and display 
+	   it on your application however you choose. Let's begin!
+	   </font></p>
+		
+       <p><font size="3" face="Verdana">First thing you need to do is click the show community tables check-box to see the entire list of tables.  Go down 
+	   to where you see Craigslist and click on the craigslist.search link. see the picture below. 
+	    </font></p>	   
+		<img src="cl1.png" width="1200">
+		
+		<p><font size="3" face="Verdana">As you can see, an example query appears regarding Schwinn bikes from San Francisco.  As I mentioned before,
+		the example query appears to show users what conditions are needed in this table to correctly query for information.  If you do not feel comfortable using the
+		SQL like query, you can click on the craigslist.search tab on the right, and it will display in an HTML form on what information is needed ot make
+		the query for this table.  
+	    </font></p>	  
+		<img src="cl2.png" width="1200">
+		
+		<p><font size="3" face="Verdana">Let's continue our example with querying for any sort of iphones in the portland area.  Type this into 
+		the Query text field and press the blue Test button: 
+		<pre>
+		select * from craigslist.search where location="portland" and type="sss" and query="iphone"
+		</pre>
+		As you can see, a response appears in the response box. Click on the JSON button in order to parse this information as a JSON object.  
+		As mentioned previously, this response may be difficult to parse as you can't really tell where the brackets open and close.  Click on Tree View
+		for a much clearer view. As you can see below, the data you most likely want with this search are items that are for sale that are iphones.
+		That is: query.results.RDF.item and depending on your application, you can display whatever type of information in each item you'd like.
+		If this were to mirror a craigslist app, mostt likely the description and a picture of the item would suffice.  
+	    </font></p>
+		<img src="cl3.png" width="1200">
+		
+		<p><font size="3" face="Verdana">Assuming this is how you'd like your craigslist-like app to function, you can now go to the bottom of the page and 
+		retrieve this information with the REST QUERY link.  This part here is where you as a developer must know how to splice up the URL that was given to you
+		and be able to interact with users of your applications to enter in data necessary for the query.  
+	    </font></p>	
+		
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      </blockquote>
+	  <p align="center"><a href="layout.html"><< Previous</a> <a href="Example2.html">Next >></a><br>
+      
+    
+      
+
+	<table border="0" width="100%" bgcolor="#000000" cellspacing="0" cellpadding="0">
+		<tr>
+		<td width="100%"><font size="1">&nbsp;</font></td>
+		</tr>
+	</table>
+</body>
+
+</html>

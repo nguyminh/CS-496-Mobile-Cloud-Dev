@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<title> Data input page </title>
+</head>
+<body>
+<h1>Input Data</h1>
+	<form action="view" method="post">
+		<fieldset>
+			<legend>Username</legend>
+			<input type="hidden" name="action" value="enter">
+			<input type="text" name="user-name">
+		</fieldset>
+		<fieldset>
+			<legend>Sex</legend>
+			<input type="radio" name="sex" value="male">Male
+			 <br>
+		    <input type="radio" name="sex" value="female">Female
+		</fieldset>
+		<fieldset>
+			<legend>Current Operating System</legend>
+			<select name="OS">
+				<option value="windows">Windows</option>
+				<option value="mac">Mac</option>
+				<option value="linux">Linux</option>
+				<option value="ubuntu">Ubuntu</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<legend>Genre of games preferred</legend>
+			<input type="checkbox" name="games[]" value="RPG">Role-playing games<br>
+			<input type="checkbox" name="games[]" value="FPS">First Person Shooter<br>
+			<input type="checkbox" name="games[]" value="MOBA">Moba<br>
+			<input type="checkbox" name="games[]" value="Racing">Racing games<br>
+		</fieldset>
+		<fieldset>
+			<legend>Describe yourself</legend>
+			<textarea name="text" rows="5" cols="20">
+			</textarea>
+		</fieldset>
+		<input name="" type="submit" value="Enter">
+	</form>
+</body>
+</html>
